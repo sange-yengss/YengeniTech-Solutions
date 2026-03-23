@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>YengeniTech Solutions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  color: white;
+}
+
+/* NAVBAR */
+nav {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: rgba(0,0,0,0.7);
+  z-index: 1000;
+}
+
+.logo {
+  font-family: 'Pacifico', cursive;
+  color: #ffb6f9;
+  font-size: 20px;
+}
+
+nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+/* HERO */
+#home {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#home video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: relative;
+  z-index: 1;
+  padding-top: 200px;
+  background: linear-gradient(rgba(255,105,180,0.4), rgba(0,0,0,0.7));
+  height: 100%;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 45px;
+}
+
+h2 {
+  text-align: center;
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* BUTTON */
+.btn {
+  background: linear-gradient(45deg, #ff6ec4, #ffb6c1);
+  padding: 14px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  margin-top: 20px;
+  box-shadow: 0 5px 20px rgba(255,105,180,0.6);
+}
+
+/* SECTIONS */
+section {
+  padding: 80px 20px;
+}
+
+/* SERVICES */
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: rgba(255,255,255,0.15);
+  margin: 15px;
+  padding: 25px;
+  width: 250px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.08);
+}
+
+.card h3 {
+  color: #ffd6f6;
+}
+
+/* PORTFOLIO */
+.portfolio {
+  text-align: center;
+}
+
+.portfolio img {
+  width: 280px;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+/* TESTIMONIAL */
+.testimonial {
+  background: rgba(0,0,0,0.3);
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  border-radius: 15px;
+  text-align: center;
+}
+
+/* CONTACT */
+#contact {
+  background: linear-gradient(135deg, #ff6ec4, #7873f5);
+  text-align: center;
+}
+
+/* ANIMATION */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+<div class="logo">💻 YengeniTech</div>
+<div>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#pricing">Pricing</a>
+<a href="#portfolio">Work</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<!-- HOME -->
+<section id="home">
+
+<video autoplay muted loop>
+<source src="https://cdn.coverr.co/videos/coverr-working-on-laptop-5176/1080p.mp4" type="video/mp4">
+</video>
+
+<div class="overlay">
+<h1>Luxury Websites For Your Business ✨</h1>
+<p>Affordable & Professional Websites For Small Businesses 💖</p>
+
+<a class="btn" href="#contact">Get Started 💬</a>
+</div>
+
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="fade-in">
+<h2>💼 My Services</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Business Websites</h3>
+<p>Professional websites that attract customers</p>
+</div>
+
+<div class="card">
+<h3>Beauty & Food Sites</h3>
+<p>Perfect for salons, food brands & small businesses</p>
+</div>
+
+<div class="card">
+<h3>WhatsApp Integration</h3>
+<p>Customers can contact you instantly</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="fade-in">
+<h2>💰 Pricing</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Basic</h3>
+<p>R300 - R500</p>
+<p>✔ Simple website</p>
+<p>✔ Contact details</p>
+<p>✔ WhatsApp button</p>
+</div>
+
+<div class="card">
+<h3>Standard</h3>
+<p>R500 - R800</p>
+<p>✔ Everything in Basic</p>
+<p>✔ Better design</p>
+<p>✔ Images & layout</p>
+</div>
+
+<div class="card">
+<h3>Premium</h3>
+<p>R800 - R1200</p>
+<p>✔ Full professional website</p>
+<p>✔ Multiple sections</p>
+<p>✔ Luxury design</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="portfolio fade-in">
+<h2>✨ My Work</h2>
+
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+<img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
+
+<p>Modern, clean and attractive business websites 💻✨</p>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="fade-in">
+<h2>⭐ Happy Clients</h2>
+
+<div class="testimonial">
+<p>“My business looks so professional now 😍”</p>
+</div>
+
+<div class="testimonial">
+<p>“I got more customers after my website!”</p>
+</div>
+
+</section>
+
+<!-- URGENCY -->
+<section class="fade-in" style="text-align:center;">
+<p style="color:#ffd6f6; font-weight:bold;">
+⚡ Limited spots available this month
+</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>📲 Contact Me</h2>
+<p>Let’s build your website today 💖</p>
+
+<a class="btn" href="https://wa.me/27812624641">Chat on WhatsApp 💬</a>
+</section>
+
+</body>
+</html>
