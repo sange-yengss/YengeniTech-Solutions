@@ -2,18 +2,23 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>YengeniTech Solutions</title>
+<title>HopeTech Solutions</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
 
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+}
+
+body {
+  color: #f3e8ff;
   scroll-behavior: smooth;
-  color: white;
 }
 
 /* NAVBAR */
@@ -22,139 +27,142 @@ nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 15px 30px;
+  padding: 20px 40px;
   background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
   z-index: 1000;
 }
 
 .logo {
-  font-family: 'Pacifico', cursive;
-  color: #ffb6f9;
-  font-size: 20px;
+  font-size: 22px;
+  color: #ff6ec4;
+  font-weight: bold;
 }
 
 nav a {
-  color: white;
-  margin-left: 15px;
+  color: #fbcfe8;
+  margin-left: 20px;
   text-decoration: none;
 }
 
-/* HERO */
+nav a:hover {
+  color: #ff6ec4;
+}
+
+/* HERO SLIDER */
 #home {
   position: relative;
+  height: 100vh;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
 }
 
-#home video {
-  position: absolute;
+.slides {
+  display: flex;
+  width: 400%;
+  animation: slide 18s infinite;
+}
+
+.slides img {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   object-fit: cover;
 }
 
+/* OVERLAY */
 .overlay {
   position: relative;
   z-index: 1;
-  padding-top: 200px;
-  background: linear-gradient(rgba(255,105,180,0.4), rgba(0,0,0,0.7));
-  height: 100%;
-  text-align: center;
+  height: 100vh;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+/* TEXT */
 h1 {
-  font-family: 'Pacifico', cursive;
-  font-size: 45px;
+  font-size: 50px;
+  background: linear-gradient(45deg, #ff6ec4, #7873f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
 }
 
 h2 {
   text-align: center;
-  background: linear-gradient(45deg, #ff9a9e, #fad0c4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  margin-bottom: 30px;
+}
+
+p {
+  color: #e9d5ff;
+  text-align: center;
 }
 
 /* BUTTON */
 .btn {
-  background: linear-gradient(45deg, #ff6ec4, #ffb6c1);
+  margin-top: 20px;
   padding: 14px 30px;
   border-radius: 30px;
-  text-decoration: none;
+  background: linear-gradient(45deg, #ff6ec4, #7873f5);
   color: white;
-  display: inline-block;
-  margin-top: 20px;
-  box-shadow: 0 5px 20px rgba(255,105,180,0.6);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
 }
 
 /* SECTIONS */
 section {
-  padding: 80px 20px;
+  padding: 100px 20px;
 }
 
-/* SERVICES */
-.services {
+/* CARDS */
+.flex {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .card {
-  background: rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.08);
   margin: 15px;
   padding: 25px;
-  width: 250px;
+  width: 260px;
   border-radius: 20px;
   backdrop-filter: blur(10px);
   transition: 0.3s;
 }
 
 .card:hover {
-  transform: scale(1.08);
+  transform: scale(1.05);
 }
 
-.card h3 {
-  color: #ffd6f6;
-}
-
-/* PORTFOLIO */
-.portfolio {
-  text-align: center;
-}
-
-.portfolio img {
-  width: 280px;
-  border-radius: 15px;
-  margin: 10px;
-}
-
-/* TESTIMONIAL */
-.testimonial {
-  background: rgba(0,0,0,0.3);
-  padding: 20px;
-  margin: 20px auto;
-  width: 80%;
-  border-radius: 15px;
-  text-align: center;
-}
-
-/* CONTACT */
-#contact {
-  background: linear-gradient(135deg, #ff6ec4, #7873f5);
-  text-align: center;
+/* PRICING */
+.price {
+  color: #ff6ec4;
+  font-size: 24px;
+  margin: 10px 0;
 }
 
 /* ANIMATION */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 1s ease forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+@keyframes slide {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(0); }
+  30% { transform: translateX(-100%); }
+  50% { transform: translateX(-100%); }
+  55% { transform: translateX(-200%); }
+  75% { transform: translateX(-200%); }
+  80% { transform: translateX(-300%); }
+  100% { transform: translateX(-300%); }
 }
 
 </style>
@@ -162,14 +170,13 @@ section {
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
-<div class="logo">💻 YengeniTech</div>
+<div class="logo">💻 Hope Tech</div>
 <div>
 <a href="#home">Home</a>
 <a href="#services">Services</a>
 <a href="#pricing">Pricing</a>
-<a href="#portfolio">Work</a>
+<a href="#info">Info</a>
 <a href="#contact">Contact</a>
 </div>
 </nav>
@@ -177,117 +184,131 @@ section {
 <!-- HOME -->
 <section id="home">
 
-<video autoplay muted loop>
-<source src="https://cdn.coverr.co/videos/coverr-working-on-laptop-5176/1080p.mp4" type="video/mp4">
-</video>
+<div class="slider">
+<div class="slides">
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+<img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
+<img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif">
+</div>
+</div>
 
 <div class="overlay">
-<h1>Luxury Websites For Your Business ✨</h1>
-<p>Affordable & Professional Websites For Small Businesses 💖</p>
-
-<a class="btn" href="#contact">Get Started 💬</a>
+<h1>Luxury Websites That Grow Your Business 💻✨</h1>
+<p>Modern • Attractive • Professional</p>
+<a href="#pricing" class="btn">View Pricing</a>
 </div>
 
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="fade-in">
-<h2>💼 My Services</h2>
+<section id="services">
+<h2>💼 Services</h2>
 
-<div class="services">
-
+<div class="flex">
 <div class="card">
 <h3>Business Websites</h3>
-<p>Professional websites that attract customers</p>
+<p>Professional websites for your business</p>
 </div>
 
 <div class="card">
-<h3>Beauty & Food Sites</h3>
-<p>Perfect for salons, food brands & small businesses</p>
+<h3>Mobile Friendly</h3>
+<p>Perfect on phones & tablets</p>
 </div>
 
 <div class="card">
 <h3>WhatsApp Integration</h3>
-<p>Customers can contact you instantly</p>
+<p>Customers contact you instantly</p>
 </div>
-
 </div>
 
 </section>
 
 <!-- PRICING -->
-<section id="pricing" class="fade-in">
+<section id="pricing">
 <h2>💰 Pricing</h2>
 
-<div class="services">
+<div class="flex">
 
 <div class="card">
 <h3>Basic</h3>
-<p>R300 - R500</p>
-<p>✔ Simple website</p>
-<p>✔ Contact details</p>
-<p>✔ WhatsApp button</p>
+<div class="price">R300 – R500</div>
+<p>✔ Simple Website</p>
+<p>✔ Contact Info</p>
 </div>
 
 <div class="card">
 <h3>Standard</h3>
-<p>R500 - R800</p>
-<p>✔ Everything in Basic</p>
-<p>✔ Better design</p>
-<p>✔ Images & layout</p>
+<div class="price">R600 – R800</div>
+<p>✔ Better Design</p>
+<p>✔ Images & Layout</p>
 </div>
 
 <div class="card">
 <h3>Premium</h3>
-<p>R800 - R1200</p>
-<p>✔ Full professional website</p>
-<p>✔ Multiple sections</p>
-<p>✔ Luxury design</p>
+<div class="price">R1000 – R1300</div>
+<p>✔ Full Website</p>
+<p>✔ Luxury Design</p>
 </div>
 
 </div>
 
-</section>
-
-<!-- PORTFOLIO -->
-<section id="portfolio" class="portfolio fade-in">
-<h2>✨ My Work</h2>
-
-<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
-<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
-<img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
-
-<p>Modern, clean and attractive business websites 💻✨</p>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="fade-in">
-<h2>⭐ Happy Clients</h2>
-
-<div class="testimonial">
-<p>“My business looks so professional now 😍”</p>
-</div>
-
-<div class="testimonial">
-<p>“I got more customers after my website!”</p>
-</div>
-
-</section>
-
-<!-- URGENCY -->
-<section class="fade-in" style="text-align:center;">
-<p style="color:#ffd6f6; font-weight:bold;">
-⚡ Limited spots available this month
+<p style="margin-top:20px;">
+Note: Domain & hosting can be added later for a more professional setup.
 </p>
+
+</section>
+
+<!-- INFO -->
+<section id="info">
+<h2>🌐 How It Works</h2>
+
+<div class="flex">
+
+<div class="card">
+<h3>Instant Website</h3>
+<p>Your site works immediately</p>
+</div>
+
+<div class="card">
+<h3>Free Start</h3>
+<p>No extra cost at the beginning</p>
+</div>
+
+<div class="card">
+<h3>Upgrade Later</h3>
+<p>Add domain anytime</p>
+</div>
+
+<div class="card">
+<h3>Google Growth</h3>
+<p>Appears on Google over time</p>
+</div>
+
+</div>
+
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
 <h2>📲 Contact Me</h2>
-<p>Let’s build your website today 💖</p>
+<p>Let’s build your website today 🚀</p>
 
-<a class="btn" href="https://wa.me/27812624641">Chat on WhatsApp 💬</a>
+<a class="btn" href="https://wa.me/27812624641">Chat on WhatsApp</a>
+
+<br><br>
+
+<a class="btn" href="mailto:sangeyengeni36@gmail.com">Send Email</a>
+
+<p style="margin-top:10px;">
+📞 081 262 4641 <br>
+📧 sangeyengeni36@gmail.com
+</p>
+
 </section>
 
 </body>
 </html>
+
+
+ 
